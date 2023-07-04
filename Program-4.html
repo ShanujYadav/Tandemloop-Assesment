@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program-4</title>
+</head>
+
+<body>
+    <script>
+        const input = [1,2,8,9,12,46,76,82,15,20,30];
+        const output = {};
+        for (let i = 1; i <= 9; i++) {
+            output[i] = 0;
+        }
+        for (let num of input) {
+            const digit = num.toString().split('').map(Number);
+            for (let d of digit) {
+                if (d >= 1 && d <= 9) {
+                    output[d]++;
+                }
+            }
+        }
+        console.log(output);
+    </script>
+</body>
+
+</html>
